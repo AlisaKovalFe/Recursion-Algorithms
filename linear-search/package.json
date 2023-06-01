@@ -1,0 +1,23 @@
+{
+    "name": "linear-search",
+    "version": "1.0.0",
+    "description": "```javascript let array = ['A', 'B', 'A']; // => [A, B, A] array.indexOf('A'); // => 0 array.indexOf('B'); // => 1 array.indexOf('C'); // => -1 ``` *Рисунок 1*. Поиск индекса элемента в массиве.",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/natashamarkis/linear-search.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/natashamarkis/linear-search/issues"
+    },
+    "homepage": "https://github.com/natashamarkis/linear-search#readme",
+    "devDependencies": {
+        "jest": "^27.3.1"
+    }
+}
