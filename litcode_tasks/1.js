@@ -3,44 +3,30 @@
 // If there is no common prefix, return an empty string "".
 
 var longestCommonPrefix = function (strs) {
-    let str = ''
-    // let arr = strs.map((el) => el.split(''))
-    // let minLength = arr[0].length
-    let i
-    // let arrAfterSlice = []
+    let arr = []
 
-    // for (i = 0; i < arr.length; i++) {
-    //     if (arr[i].length < minLength) minLength = arr[i].length
-    // }
-
-    // for (i = 0; i < arr.length; i++) {
-    //     arrAfterSlice.push(arr[i].slice(0, minLength))
-    // }
-
-    // console.log(arrAfterSlice);
-
-
-    // for (i = 0; i < arrAfterSlice.length; i++) {
-    //     for (let j = 0; arrAfterSlice[i].length; j++) {
-    //         if (arrAfterSlice[i].includes(arrAfterSlice[i + 1][j])) {
-    //             // str += arr[i][j]
-    //             console.log('hi');
-    //         }
-    //     }
-    // }
-
-    for (let i = 0; i < strs[i].length; i++) {
-        for (let j = 1; i < strs[i + 1].length; j++) {
-            if (strs[i][i] == strs[i + 1][j]) {
-                str += strs[i][i]
-            }
+    for (let i = 0; i < strs.length - 1; i++) {
+        if (strs[i][0] != strs[i + 1][0]) return ''
+        for (let j = 0; j < strs[i].length; j++) {
+            if (strs[i][j] == strs[i + 1][j]) arr.push(strs[i][j])
         }
     }
 
-    console.log(str);
+    let res = arr.filter((el, index) => index !== arr.indexOf(el)).join('')
 
-    // return str
-};
+    return res
 
-console.log(longestCommonPrefix(["flower", "flow", "flight"]));
 
+    // решение мужа
+    // let str = ''
+    // for (let i = 0; i < strs[0].length; i++) {
+    //     for (let n = 1; n < strs.length; n++) {
+    //         if (strs[0][i] != strs[n][i]) return str;
+    //     }
+    //     str += strs[0][i];
+    // }
+}
+
+// console.log(longestCommonPrefix(["flower", "flow", "flight"]));
+console.log(longestCommonPrefix(["flower", "flow", "flowers"]));
+// console.log(longestCommonPrefix(["dog", "racecar", "car"]));
