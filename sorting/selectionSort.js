@@ -1,3 +1,4 @@
+// из учебника
 const findSmallest = (arr) => {
     let smallest = arr[0]
     let smallestIndex = 0

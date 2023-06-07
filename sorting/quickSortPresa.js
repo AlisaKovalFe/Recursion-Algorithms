@@ -1,3 +1,5 @@
+//этот код не понимаю
+
 function partition(items, left, right) {
     const pivot = items[Math.floor((right + left) / 2)];
     let i = left;
