@@ -3,17 +3,35 @@
 
 function binarySearch(arr, item) {
     arr.sort()
-    let start = 0
-    let end = arr.length - 1
+    console.log(arr);
 
-    while (start <= end) {
+    function binaryExecutor(arr, item, start, end) {
         let middle = Math.floor((start + end) / 2)
-        let guess = arr[middle]
-        if (guess === item) return middle
-        if (guess < item) start = middle + 1
-        if (guess > item) end = middle - 1
+
+        if (end < start) return -1
+        if (item === arr[middle]) return middle
+        if (item < arr[middle]) return binaryExecutor(arr, item, start, middle - 1)
+        if (item > arr[middle]) return binaryExecutor(arr, item, middle + 1, end)
     }
-    return - 1
+
+    return binaryExecutor(arr, item, 0, arr.length - 1)
 }
+
+// console.log(binarySearch(['A', 'B', 'D', 'C', 'E', 'F', 'G', 'H'], 'D'));
+
+// function binarySearch(arr, item) {
+//     arr.sort()
+//     let start = 0
+//     let end = arr.length - 1
+
+//     while (start <= end) {
+//         let middle = Math.floor((start + end) / 2)
+//         let guess = arr[middle]
+//         if (guess === item) return middle
+//         if (guess < item) start = middle + 1
+//         if (guess > item) end = middle - 1
+//     }
+//     return - 1
+// }
 
 module.exports = binarySearch

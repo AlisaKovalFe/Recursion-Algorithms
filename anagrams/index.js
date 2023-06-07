@@ -12,3 +12,5 @@ console.log(isAnagrams('melon', 'melon'));
 console.log(isAnagrams('MELON', 'lemon'));
 console.log(isAnagrams('abcde2', 'c2abed'));
 console.log(isAnagrams('kilso', 'osilk'));
+
+module.exports = isAnagrams

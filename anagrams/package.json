@@ -1,0 +1,23 @@
+{
+    "name": "anagrams",
+    "version": "1.0.0",
+    "description": "В этой задаче ты будешь писать метод, который расскажет, являются ли два слова анаграммами.  Анаграмма - это слово, образованное перестановкой букв другого слова. Например, ты можешь записать слово *melon*, переставив буквы в слове *lemon*. Поэтому *melon* является анаграммой *lemon*, также как *lemon* является анаграммой *melon*.",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/natashamarkis/anagrams.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/natashamarkis/anagrams/issues"
+    },
+    "homepage": "https://github.com/natashamarkis/anagrams#readme",
+    "devDependencies": {
+        "jest": "^27.5.1"
+    }
+}
